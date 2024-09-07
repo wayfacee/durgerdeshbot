@@ -2,8 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background: var(--tg-theme-bg-color);
   max-width: 390px;
+}
+
+.app {
+  padding: 25px;
+  margin: 0 auto;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background: none;
 }

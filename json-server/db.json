@@ -1,0 +1,88 @@
+{
+  "card": [
+    {
+      "id": "1",
+      "img": "https://em-content.zobj.net/source/telegram/386/shortcake_1f370.webp",
+      "price": "1",
+      "title": "Cake",
+      "buttonTitle": "ADD"
+    },
+    {
+      "id": "2",
+      "img": "https://em-content.zobj.net/source/telegram/386/hamburger_1f354.webp",
+      "price": "$4.99",
+      "title": "Burger",
+      "buttonTitle": "ADD"
+    },
+    {
+      "id": "3",
+      "img": "https://em-content.zobj.net/source/telegram/386/french-fries_1f35f.webp",
+      "price": "$1.49",
+      "title": "Fries",
+      "buttonTitle": "ADD"
+    },
+    {
+      "id": "4",
+      "img": "https://em-content.zobj.net/source/telegram/386/hot-dog_1f32d.webp",
+      "price": "$3.49",
+      "title": "Hotdog",
+      "buttonTitle": "ADD"
+    },
+    {
+      "id": "5",
+      "img": "https://em-content.zobj.net/source/telegram/386/taco_1f32e.webp",
+      "price": "$3.99",
+      "title": "Taco",
+      "buttonTitle": "ADD"
+    },
+    {
+      "id": "6",
+      "img": "https://em-content.zobj.net/source/telegram/386/pizza_1f355.webp",
+      "price": "$7.99",
+      "title": "Pizza",
+      "buttonTitle": "ADD"
+    },
+    {
+      "id": "7",
+      "img": "https://em-content.zobj.net/source/telegram/386/doughnut_1f369.webp",
+      "price": "$1.49",
+      "title": "Donut",
+      "buttonTitle": "ADD"
+    },
+    {
+      "id": "8",
+      "img": "https://em-content.zobj.net/source/telegram/386/popcorn_1f37f.webp",
+      "price": "$1.99",
+      "title": "Popcorn",
+      "buttonTitle": "ADD"
+    },
+    {
+      "id": "9",
+      "img": "https://em-content.zobj.net/source/telegram/386/cup-with-straw_1f964.webp",
+      "price": "$1.49",
+      "title": "Juice",
+      "buttonTitle": "ADD"
+    },
+    {
+      "id": "10",
+      "img": "https://em-content.zobj.net/source/telegram/386/soft-ice-cream_1f366.webp",
+      "price": "$5.99",
+      "title": "Icecream",
+      "buttonTitle": "ADD"
+    },
+    {
+      "id": "11",
+      "img": "https://em-content.zobj.net/source/telegram/386/cookie_1f36a.webp",
+      "price": "$3.99",
+      "title": "Cookie",
+      "buttonTitle": "ADD"
+    },
+    {
+      "id": "12",
+      "img": "https://em-content.zobj.net/source/telegram/386/custard_1f36e.webp",
+      "price": "$7.99",
+      "title": "Flan",
+      "buttonTitle": "ADD"
+    }
+  ]
+}
