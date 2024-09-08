@@ -12,7 +12,7 @@ import { useTelegram } from "@/shared/lib/hooks/useTelegram";
 
 const getTotalPrice = (items: ProductToAdd[] = []): number => {
   return items.reduce((acc, item) => {
-    const price = parseFloat(item.product.price); // Преобразуем строку в число
+    const price = parseFloat(item.product.price.replace('$', '')); // Преобразуем строку в число
     return acc + (isNaN(price) ? 0 : price * item.quantity); // Добавляем цену, если она корректна
   }, 0);
 };
@@ -20,7 +20,6 @@ const getTotalPrice = (items: ProductToAdd[] = []): number => {
 export const ProductList = () => {
   const [products, setProducts] = useState<ProductFromDB[]>([]);
   const [loading, setLoading] = useState(true);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [error, setError] = useState<string | null>(null);
   const { tg, user } = useTelegram();
   const [addedProducts, setAddedProducts] = useState<ProductToAdd[]>([]);
@@ -69,7 +68,6 @@ export const ProductList = () => {
     }
 
     const data: OrderProduct = {
-      _id: Date.now(),
       user: user?.username,
       products: addedProducts,
       totalPrice: getTotalPrice(addedProducts),

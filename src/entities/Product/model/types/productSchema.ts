@@ -13,7 +13,6 @@ export interface ProductToAdd {
 }
 
 export interface OrderProduct {
-  _id: number;
   user: string;
   products: ProductToAdd[];
   totalPrice: number;
