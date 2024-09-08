@@ -110,6 +110,7 @@ export const ProductList = () => {
         />
       ))}
 
+      <button onClick={onMainButtonClick}>mainbtn</button>
       {error && <h5 className="text-red-500">{error}</h5>}
     </div>
   );
