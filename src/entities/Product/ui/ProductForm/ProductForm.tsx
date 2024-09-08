@@ -2,10 +2,8 @@ import { useTelegram } from "@/shared/lib/hooks/useTelegram";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import type {
-  OrderProduct,
   ProductToAdd,
 } from "../../model/types/productSchema";
-import axios from "axios";
 import cl from "./ProductForm.module.scss";
 import { ProductFormItem } from "../ProductFormItem/ProductFormItem";
 
@@ -23,30 +21,33 @@ export const ProductForm = () => {
   const [comment, setComment] = useState("");
   const { tg } = useTelegram();
 
-  const [error, setError] = useState("");
-  const { user } = useTelegram();
-  //
+  const [error] = useState("");
+  // const { user } = useTelegram();
 
-  const onSendData = useCallback(async () => {
-    if (!user?.username) {
-      setError(
-        "To place an order, you must have a username (example: @wildesh)",
-      );
-      return;
-    }
+  // const onSendData = useCallback(async () => {
+  //   if (!user?.username) {
+  //     setError(
+  //       "To place an order, you must have a username (example: @wildesh)",
+  //     );
+  //     return;
+  //   }
 
-    const data: OrderProduct = {
-      user: user?.username,
-      products: products,
-      totalPrice: getTotalPrice(products),
-    };
+  //   const data: OrderProduct = {
+  //     user: user?.username,
+  //     products: products,
+  //     totalPrice: getTotalPrice(products),
+  //   };
 
-    try {
-      await axios.post("http://localhost:5000/orders", data);
-    } catch (e) {
-      console.error("Error sending data:", e);
-    }
-  }, [products, user?.username]);
+  //   try {
+  //     await axios.post("http://localhost:5000/orders", data);
+  //   } catch (e) {
+  //     console.error("Error sending data:", e);
+  //   }
+  // }, [products, user?.username]);
+
+  const onShowAlert = useCallback(() => {
+    tg.showAlert("This is a test bot, you cannot order products!");
+  }, [tg]);
 
   if (products.length === 0) {
     tg.MainButton.hide();
@@ -59,12 +60,12 @@ export const ProductForm = () => {
   }
 
   useEffect(() => {
-    tg.onEvent("mainButtonClicked", onSendData);
+    tg.onEvent("mainButtonClicked", onShowAlert);
 
     return () => {
-      tg.offEvent("mainButtonClicked", onSendData);
+      tg.offEvent("mainButtonClicked", onShowAlert);
     };
-  }, [onSendData, tg]);
+  }, [onShowAlert, tg]);
 
   return (
     <div className={cl.container}>
