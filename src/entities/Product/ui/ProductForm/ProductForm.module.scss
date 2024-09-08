@@ -1,7 +1,3 @@
-.container {
-  background: var(--tg-theme-bg-color);
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -31,7 +27,7 @@
 .back {
   height: 13px;
   width: 100%;
-  background: var(--tg-theme-secondary-bg-color);
+  background: var(--tg-theme-bg-color);
 }
 
 .input {
