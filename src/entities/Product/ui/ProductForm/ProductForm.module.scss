@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+
+  h5 {
+    font-size: 17px;
+    font-weight: 900;
+  }
+
+  .edit {
+    font-size: 15px;
+    font-weight: 500;
+    color: #31b545;
+  }
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.back {
+  height: 13px;
+  width: 100%;
+  background: #e3e3e3;
+}
+
+.input {
+  // margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 17px;
+
+  ::placeholder {
+    color: gray;
+  }
+}

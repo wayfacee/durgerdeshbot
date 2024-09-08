@@ -3,6 +3,7 @@ export interface ProductFromDB {
   img: string;
   price: string;
   title: string;
+  description: string;
   buttonTitle: string;
 }
 

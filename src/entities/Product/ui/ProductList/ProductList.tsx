@@ -1,29 +1,20 @@
-import {
-  OrderProduct,
-  ProductFromDB,
-  ProductToAdd,
-} from "../../model/types/productSchema";
+import { ProductFromDB, ProductToAdd } from "../../model/types/productSchema";
 import axios from "axios";
 import { ProductItem } from "../ProductItem/ProductItem";
 import { useCallback, useEffect, useState } from "react";
 import cl from "./ProductList.module.scss";
 import { Skeleton } from "@/shared/ui/Skeleton";
 import { useTelegram } from "@/shared/lib/hooks/useTelegram";
-
-const getTotalPrice = (items: ProductToAdd[] = []): number => {
-  return items.reduce((acc, item) => {
-    const price = parseFloat(item.product.price.replace('$', '')); // Преобразуем строку в число
-    return acc + (isNaN(price) ? 0 : price * item.quantity); // Добавляем цену, если она корректна
-  }, 0);
-};
+import { useNavigate } from "react-router-dom";
 
 export const ProductList = () => {
   const [products, setProducts] = useState<ProductFromDB[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const { tg, user } = useTelegram();
+  const { tg } = useTelegram();
   const [addedProducts, setAddedProducts] = useState<ProductToAdd[]>([]);
   const [count, setCount] = useState<{ [key: number]: number }>({});
+  const navigate = useNavigate();
 
   const updateAddedProducts = useCallback(() => {
     const newAddedProducts: ProductToAdd[] = products
@@ -40,7 +31,8 @@ export const ProductList = () => {
     } else {
       tg.MainButton.show();
       tg.MainButton.setParams({
-        text: `Купить $${getTotalPrice(newAddedProducts).toFixed(2)}`,
+        text: "VIEW ORDER",
+        color: '#31b545'
       });
     }
   }, [count, products, tg.MainButton]);
@@ -59,26 +51,13 @@ export const ProductList = () => {
     }));
   }, []);
 
-  const onSendData = useCallback(async () => {
-    if (!user?.username) {
-      setError(
-        "To place an order, you must have a username (example: @wildesh)",
-      );
-      return;
+  const onMainButtonClick = useCallback(() => {
+    if (addedProducts.length > 0) {
+      navigate("/product-form", { state: { products: addedProducts } });
+    } else {
+      setError("Please add at least 1 product!");
     }
-
-    const data: OrderProduct = {
-      user: user?.username,
-      products: addedProducts,
-      totalPrice: getTotalPrice(addedProducts),
-    };
-
-    try {
-      await axios.post("http://localhost:5000/orders", data);
-    } catch (e) {
-      console.error("Error sending data:", e);
-    }
-  }, [addedProducts, user?.username]);
+  }, [addedProducts, navigate]);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -102,12 +81,12 @@ export const ProductList = () => {
   }, [updateAddedProducts, products]);
 
   useEffect(() => {
-    tg.onEvent("mainButtonClicked", onSendData);
+    tg.onEvent("mainButtonClicked", onMainButtonClick);
 
     return () => {
-      tg.offEvent("mainButtonClicked", onSendData);
+      tg.offEvent("mainButtonClicked", onMainButtonClick);
     };
-  }, [onSendData, tg]);
+  }, [onMainButtonClick, tg]);
 
   if (loading) {
     return (
@@ -131,6 +110,7 @@ export const ProductList = () => {
         />
       ))}
 
+      <button onClick={onMainButtonClick}>mainbtn</button>
       {error && <h5 className="text-red-500">{error}</h5>}
     </div>
   );

@@ -5,6 +5,7 @@
       "img": "https://em-content.zobj.net/source/telegram/386/shortcake_1f370.webp",
       "price": "1",
       "title": "Cake",
+      "description": "",
       "buttonTitle": "BUY"
     },
     {
@@ -12,6 +13,7 @@
       "img": "https://em-content.zobj.net/source/telegram/386/hamburger_1f354.webp",
       "price": "$4.99",
       "title": "Burger",
+      "description": "Meat™",
       "buttonTitle": "ADD"
     },
     {
@@ -19,6 +21,7 @@
       "img": "https://em-content.zobj.net/source/telegram/386/french-fries_1f35f.webp",
       "price": "$1.49",
       "title": "Fries",
+      "description": "Po-ta-toes",
       "buttonTitle": "ADD"
     },
     {
@@ -26,6 +29,7 @@
       "img": "https://em-content.zobj.net/source/telegram/386/hot-dog_1f32d.webp",
       "price": "$3.49",
       "title": "Hotdog",
+      "description": "0% dog, 100% hot",
       "buttonTitle": "ADD"
     },
     {
@@ -33,6 +37,7 @@
       "img": "https://em-content.zobj.net/source/telegram/386/taco_1f32e.webp",
       "price": "$3.99",
       "title": "Taco",
+      "description": "Mucho más",
       "buttonTitle": "ADD"
     },
     {
@@ -40,6 +45,7 @@
       "img": "https://em-content.zobj.net/source/telegram/386/pizza_1f355.webp",
       "price": "$7.99",
       "title": "Pizza",
+      "description": "That's amore",
       "buttonTitle": "ADD"
     },
     {
@@ -47,6 +53,7 @@
       "img": "https://em-content.zobj.net/source/telegram/386/doughnut_1f369.webp",
       "price": "$1.49",
       "title": "Donut",
+      "description": "Hole included",
       "buttonTitle": "ADD"
     },
     {
@@ -54,6 +61,7 @@
       "img": "https://em-content.zobj.net/source/telegram/386/popcorn_1f37f.webp",
       "price": "$1.99",
       "title": "Popcorn",
+      "description": "Light, camera, corn",
       "buttonTitle": "ADD"
     },
     {
@@ -61,6 +69,7 @@
       "img": "https://em-content.zobj.net/source/telegram/386/cup-with-straw_1f964.webp",
       "price": "$1.49",
       "title": "Juice",
+      "description": "The liquid kind",
       "buttonTitle": "ADD"
     },
     {
@@ -68,6 +77,7 @@
       "img": "https://em-content.zobj.net/source/telegram/386/soft-ice-cream_1f366.webp",
       "price": "$5.99",
       "title": "Icecream",
+      "description": "Cone of shame",
       "buttonTitle": "ADD"
     },
     {
@@ -75,6 +85,7 @@
       "img": "https://em-content.zobj.net/source/telegram/386/cookie_1f36a.webp",
       "price": "$3.99",
       "title": "Cookie",
+      "description": "Milk's favorite",
       "buttonTitle": "ADD"
     },
     {
@@ -82,6 +93,7 @@
       "img": "https://em-content.zobj.net/source/telegram/386/custard_1f36e.webp",
       "price": "$7.99",
       "title": "Flan",
+      "description": "Flan-tastic",
       "buttonTitle": "ADD"
     }
   ],
@@ -114,6 +126,160 @@
         }
       ],
       "totalPrice": 10000
+    },
+    {
+      "id": "68e6",
+      "_id": 1725791471194,
+      "user": "wayfaceee",
+      "products": [
+        {
+          "productId": "2",
+          "product": {
+            "id": "2",
+            "img": "https://em-content.zobj.net/source/telegram/386/hamburger_1f354.webp",
+            "price": "$4.99",
+            "title": "Burger",
+            "buttonTitle": "ADD"
+          },
+          "quantity": 5
+        },
+        {
+          "productId": "3",
+          "product": {
+            "id": "3",
+            "img": "https://em-content.zobj.net/source/telegram/386/french-fries_1f35f.webp",
+            "price": "$1.49",
+            "title": "Fries",
+            "buttonTitle": "ADD"
+          },
+          "quantity": 6
+        },
+        {
+          "productId": "5",
+          "product": {
+            "id": "5",
+            "img": "https://em-content.zobj.net/source/telegram/386/taco_1f32e.webp",
+            "price": "$3.99",
+            "title": "Taco",
+            "buttonTitle": "ADD"
+          },
+          "quantity": 4
+        },
+        {
+          "productId": "6",
+          "product": {
+            "id": "6",
+            "img": "https://em-content.zobj.net/source/telegram/386/pizza_1f355.webp",
+            "price": "$7.99",
+            "title": "Pizza",
+            "buttonTitle": "ADD"
+          },
+          "quantity": 5
+        },
+        {
+          "productId": "7",
+          "product": {
+            "id": "7",
+            "img": "https://em-content.zobj.net/source/telegram/386/doughnut_1f369.webp",
+            "price": "$1.49",
+            "title": "Donut",
+            "buttonTitle": "ADD"
+          },
+          "quantity": 4
+        },
+        {
+          "productId": "8",
+          "product": {
+            "id": "8",
+            "img": "https://em-content.zobj.net/source/telegram/386/popcorn_1f37f.webp",
+            "price": "$1.99",
+            "title": "Popcorn",
+            "buttonTitle": "ADD"
+          },
+          "quantity": 6
+        },
+        {
+          "productId": "9",
+          "product": {
+            "id": "9",
+            "img": "https://em-content.zobj.net/source/telegram/386/cup-with-straw_1f964.webp",
+            "price": "$1.49",
+            "title": "Juice",
+            "buttonTitle": "ADD"
+          },
+          "quantity": 5
+        },
+        {
+          "productId": "12",
+          "product": {
+            "id": "12",
+            "img": "https://em-content.zobj.net/source/telegram/386/custard_1f36e.webp",
+            "price": "$7.99",
+            "title": "Flan",
+            "buttonTitle": "ADD"
+          },
+          "quantity": 3
+        }
+      ],
+      "totalPrice": 0
+    },
+    {
+      "id": "2cd6",
+      "user": "wayfaceee",
+      "products": [
+        {
+          "productId": "2",
+          "product": {
+            "id": "2",
+            "img": "https://em-content.zobj.net/source/telegram/386/hamburger_1f354.webp",
+            "price": "$4.99",
+            "title": "Burger",
+            "buttonTitle": "ADD"
+          },
+          "quantity": 9
+        },
+        {
+          "productId": "3",
+          "product": {
+            "id": "3",
+            "img": "https://em-content.zobj.net/source/telegram/386/french-fries_1f35f.webp",
+            "price": "$1.49",
+            "title": "Fries",
+            "buttonTitle": "ADD"
+          },
+          "quantity": 8
+        },
+        {
+          "productId": "6",
+          "product": {
+            "id": "6",
+            "img": "https://em-content.zobj.net/source/telegram/386/pizza_1f355.webp",
+            "price": "$7.99",
+            "title": "Pizza",
+            "buttonTitle": "ADD"
+          },
+          "quantity": 6
+        }
+      ],
+      "totalPrice": 104.77000000000001
+    },
+    {
+      "id": "4897",
+      "user": "wayfaceee",
+      "products": [
+        {
+          "productId": "9",
+          "product": {
+            "id": "9",
+            "img": "https://em-content.zobj.net/source/telegram/386/cup-with-straw_1f964.webp",
+            "price": "$1.49",
+            "title": "Juice",
+            "buttonTitle": "ADD"
+          },
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 1.49
     }
   ]
 }

@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  text-align: center;
+  padding: 3px 0;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+
+  .img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .titles {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+
+    .title {
+      font-weight: 600;
+      font-size: 15px;
+      color: black;
+
+      .span {
+        color: orange;
+        font-weight: 800;
+      }
+    }
+
+    .desc {
+      font-size: 14px;
+      color: gray;
+      font-weight: 400;
+    }
+  }
+}
+
+.price {
+  color: black;
+  text-align: end;
+  top: 0;
+  font-weight: 500;
+  font-size: 14px;
+}
