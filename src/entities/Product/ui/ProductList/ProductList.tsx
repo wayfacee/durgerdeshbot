@@ -40,7 +40,7 @@ export const ProductList = () => {
     } else {
       tg.MainButton.show();
       tg.MainButton.setParams({
-        text: `Купить $${getTotalPrice(newAddedProducts)}`,
+        text: `Купить $${getTotalPrice(newAddedProducts).toFixed(2)}`,
       });
     }
   }, [count, products, tg.MainButton]);
