@@ -1,21 +1,23 @@
 import { Button } from "@/shared/ui/Button/Button";
 import { ProductFromDB } from "../../model/types/productSchema";
 import cl from "./ProductItem.module.scss";
-import { memo, useCallback, useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 
-export const ProductItem = memo((product: ProductFromDB) => {
-  const { buttonTitle, img, price, title } = product;
-  const [count, setCount] = useState(0);
+interface ProductItemProps {
+  product: ProductFromDB;
+  count: number;
+  onPlus: (id: number) => void;
+  onMinus: (id: number) => void;
+}
+
+export const ProductItem = memo((props: ProductItemProps) => {
+  const {
+    onMinus,
+    onPlus,
+    count,
+    product: { id, buttonTitle, img, price, title },
+  } = props;
   const [animateKey, setAnimateKey] = useState(0);
-
-  const onPlus = useCallback(() => {
-    setCount((prevCount) => prevCount + 1);
-    setAnimateKey((prevKey) => prevKey + 1);
-  }, []);
-
-  const onMinus = useCallback(() => {
-    setCount((prevCount) => Math.max(prevCount - 1, 0));
-  }, []);
 
   useEffect(() => {
     if (count > 0) {
@@ -32,8 +34,8 @@ export const ProductItem = memo((product: ProductFromDB) => {
       </p>
       <Button
         moreThanOne={count > 0}
-        onPlus={onPlus}
-        onMinus={onMinus}
+        onPlus={() => onPlus(id)}
+        onMinus={() => onMinus(id)}
         title={buttonTitle}
       />
 

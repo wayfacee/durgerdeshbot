@@ -1,7 +1,20 @@
 export interface ProductFromDB {
-  id: string;
+  id: number;
   img: string;
   price: string;
   title: string;
   buttonTitle: string;
+}
+
+export interface ProductToAdd {
+  productId: number;
+  product: ProductFromDB;
+  quantity: number;
+}
+
+export interface OrderProduct {
+  _id: number;
+  user: string;
+  products: ProductToAdd[];
+  totalPrice: number;
 }
