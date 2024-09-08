@@ -46,7 +46,7 @@ export const ProductForm = () => {
   // }, [products, user?.username]);
 
   const onShowAlert = useCallback(() => {
-    tg.showAlert("This is a test bot, you cannot order products!");
+    tg.showAlert("This is a test bot, you cannot order products!\n\n If you want to order such a bot: @wildesh");
   }, [tg]);
 
   if (products.length === 0) {
@@ -87,7 +87,6 @@ export const ProductForm = () => {
         ))}
       </div>
 
-      <div className={cl.back} />
 
       <input
         type="text"
@@ -97,7 +96,6 @@ export const ProductForm = () => {
         onChange={(e) => setComment(e.target.value)}
       />
 
-      <div className={cl.back} />
 
       {error && <p>{error}</p>}
     </div>

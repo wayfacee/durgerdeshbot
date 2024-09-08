@@ -31,15 +31,21 @@
 }
 
 .input {
-  // margin-top: 15px;
+  margin-top: 15px;
   width: 100%;
   padding: 10px;
-  outline: none;
-  border: none;
+  border: 2px solid #eaeaea;
+  border-radius: 7px;
   background: transparent;
   font-size: 17px;
+  outline: none;
 
-  ::placeholder {
+  &:focus {
+    outline: #d2d0d0;
+    border-color: #d2d0d0;
+  }
+
+  &::placeholder {
     color: gray;
   }
 }
