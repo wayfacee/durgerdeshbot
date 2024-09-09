@@ -63,7 +63,7 @@ export const ProductList = () => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get<ProductFromDB[]>(
-          import.meta.env.VITE_APP_BD,
+          "https://665cb2d73e4ac90a04da6151.mockapi.io/card",
         );
         setProducts(response.data);
       } catch {
