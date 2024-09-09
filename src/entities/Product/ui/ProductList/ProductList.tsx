@@ -32,7 +32,7 @@ export const ProductList = () => {
       tg.MainButton.show();
       tg.MainButton.setParams({
         text: "VIEW ORDER",
-        color: '#31b545'
+        color: "#31b545",
       });
     }
   }, [count, products, tg.MainButton]);
@@ -63,7 +63,7 @@ export const ProductList = () => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get<ProductFromDB[]>(
-          "http://localhost:5000/card",
+          import.meta.env.VITE_APP_BD,
         );
         setProducts(response.data);
       } catch {
